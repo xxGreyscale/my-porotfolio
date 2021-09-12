@@ -1,7 +1,78 @@
+
+@import './layout.scss';
+
 .intro {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+   
 }
+
+.cls-1 {
+    fill: #e0f2fa;
+}
+
+.greeting {
+    font-weight: 700;
+    color: #666666;
+    font-size: 1.275rem;
+}
+
+
+h1.name {
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: #010101;
+    margin: 0 auto;
+    margin-left: -.3rem;
+    line-height: 1.4;
+}
+
+.description {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+
+    .location {
+        padding-right: 1rem;
+        transition: all 1s ease-in;
+    }
+
+
+    .careers {
+        padding: 0rem 1rem;
+        animation: disolve 1s forwards;
+    }
+}
+
+
+.animated-svg {
+    transform: rotate(180deg);
+    transform: translate(15%, -28%);
+
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    z-index: 1;
+    text-align: center;
+    min-width: 45vw;
+}
+
+.landing {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes disolve {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }    
+}
+
