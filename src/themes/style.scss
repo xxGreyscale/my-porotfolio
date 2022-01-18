@@ -1,55 +1,98 @@
 
 @import './layout.scss';
+@import './attribute.scss';
 
-.intro {
-   
-}
-
-.cls-1 {
-    fill: #e0f2fa;
-}
-
-.greeting {
-    font-weight: 700;
-    color: #666666;
-    font-size: 1.275rem;
-}
 
 
 h1.name {
-    font-size: 3.5rem;
-    font-weight: 200;
+    font-size: calc(max(2vw, 5em, 5rem));
+    font-weight: 600;
     color: #010101;
     margin: 0 auto;
     margin-left: -.3rem;
     line-height: 1.4;
 }
 
-.description {
-    display: flex;
+p.about-me {
+    font-size: calc(max(2vw, 3em, 3rem));
+    font-weight: 500;
+
+}
+
+p.caption {
+    font-size: calc(max(2vw, 1.75em , 1.75rem)) !important;
+    font-weight: 200;
+}
+
+#animated_blob {
+    height: 100%;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
+}
+
+
+.landing {
+    // z-index: -1;
+}
+
+.first-fold {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+.greeting {
+    font-weight: 300;
+    color: #666666;
+    font-size: 1.275rem;
+    // another font here 
+}
+
+
+
+.intro {
+    margin: auto;
+    z-index: 1;
+ }
+ 
+ .cls-1 {
+     fill: #e0f2fa;
+ }
+
+
+
+.description {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+    grid-gap: 3rem;
+    width: 100%;
     align-items: center;
     height: auto;
+    font-size: calc(max(1.85vw, 1.475em, 1.475rem));
+    font-weight: 300;
+
+    p {
+        margin: 1rem 0rem;
+    }
 
     .location {
-        padding-right: 1rem;
         transition: all 1s ease-in;
     }
 
 
     .careers {
-        padding: 0rem 1rem;
         animation: disolve 1s forwards;
     }
+
 }
 
 
 .animated-svg {
     transform: rotate(180deg);
-    transform: translate(15%, -28%);
-
+    transform: translate(0%, -30%);
+    height: calc(max(20vw, 40rem, 200px));
+    width: calc(max(20vw, 25rem, 100px));
     display: block;
     position: absolute;
     z-index: -1;
@@ -57,15 +100,12 @@ h1.name {
 
 .content {
     z-index: 1;
-    text-align: center;
-    min-width: 45vw;
+    text-align: left;
+    width: fit-content;
+    // min-width: 45vw;
 }
 
-.landing {
-    display: block;
-    position: relative;
-    z-index: 1;
-}
+
 
 @keyframes disolve {
     from {
@@ -75,4 +115,3 @@ h1.name {
         opacity: 1;
     }    
 }
-

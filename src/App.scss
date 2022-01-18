@@ -1,4 +1,13 @@
 @import './themes/style.scss';
+/* The following line can be included in a src/App.scss */
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+.titilium-web-font {
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
 
 @keyframes App-logo-spin {
   from {
