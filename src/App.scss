@@ -1,11 +1,35 @@
+
 @import './themes/style.scss';
 /* The following line can be included in a src/App.scss */
 
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
 .titilium-web-font {
   font-family: 'Titillium Web', sans-serif !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-weight-semi-bold {
+  font-weight: 600 !important;
+}
+
+.text-weight-bold {
+  font-weight: 700 !important;
+}
+
+.disabled {
+  text-decoration: none;
+  opacity: .6;
 }
 
 

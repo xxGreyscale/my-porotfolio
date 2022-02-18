@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.828" viewBox="0 0 16 16.828">
+  <defs>
+    <style>
+      .cls-arrow {
+        fill: none;
+        stroke: #685271;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(-4 -3.586)">
+    <path id="Path_20" data-name="Path 20" class="cls-arrow" d="M5,12H19"/>
+    <path id="Path_21" data-name="Path 21" class="cls-arrow" d="M12,5l7,7-7,7"/>
+  </g>
+</svg>

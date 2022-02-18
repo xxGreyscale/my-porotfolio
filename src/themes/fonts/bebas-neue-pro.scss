@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Eb';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEEbRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEEbRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEEbRegular.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Book';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEBkRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEBkRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEBkRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Book';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEBkItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEBkItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEBkItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Regular';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmERgBold.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgBold.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('bebas-neue-semi-expanded/BebasNeueProRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Regular';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmERgBoldItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgBoldItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Light';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmELgRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmELgRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmELgRegular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Light';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmELgItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmELgItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmELgItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Thin';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEThRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEThRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEThRegular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Eb';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEEbItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEEbItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEEbItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Middle';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEMdRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEMdRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEMdRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Regular';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmERgRegular.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgRegular.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Regular';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmERgItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmERgItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Middle';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEMdItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEMdItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEMdItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Pro SmE Thin';
+    src: url('bebas-neue-semi-expanded/BebasNeueProSmEThItalic.woff2') format('woff2'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEThItalic.woff') format('woff'),
+        url('bebas-neue-semi-expanded/BebasNeueProSmEThItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+

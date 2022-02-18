@@ -1,0 +1,22 @@
+
+
+
+.header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    h5 {
+        display: inline-block;
+    }
+}
+
+.menu {
+    max-width: calc(1.75rem + 0.3vw);
+
+    svg {
+        // width: inherit;
+    }
+}

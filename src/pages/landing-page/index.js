@@ -3,15 +3,22 @@ import KUTE from "kute.js";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import TentenPoster from '../../assets/img/tenten-poster.png'
+import {ReactComponent as RightArrow} from '../../assets/svg/Icon feather-arrow-right.svg'
+import {ReactComponent as UpRightArrow} from '../../assets/svg/Icon feather-arrow-up-right.svg'
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+import Menu from "../../components/menu";
+
 
 
 const LandingPage = () => {
-    const [careerIndex, setCareerIndex] = useState(0);
-    const [displayedCareers, setDisplayedCareers] = useState([])
-    const careers = [`👨🏽‍💻   Experienced Full Stack Developer`, `🖥    Experienced UX/UI Designer`];
+  const careers = [`👨🏽‍💻 Full Stack Developer`, `🖥  UX/UI Designer`, `☁️ AWS Cloud Practitioner`];
+  const [displayedCareers, setDisplayedCareers] = useState(careers[1])
     
     
     useEffect(() => {
+      const careersArr = [`👨🏽‍💻 Full Stack Developer`, `🖥  UX/UI Designer`, `☁️ AWS Cloud Practitioner`]
       const tween = KUTE.fromTo(
           "#blob_1",
           { path: "#blob_1" },
@@ -23,39 +30,33 @@ const LandingPage = () => {
         );
         
         tween.start();
-      
+        let i = 0
+        setInterval(() => {
+          console.log(i);
+          if(i >= (careersArr.length - 1)) {
+            i = 0
+            console.log(careersArr[i]);
+            setDisplayedCareers(careersArr[i])
+            return
+          } else {
+            i = i + 1
+            console.log(careersArr[i]);
+            setDisplayedCareers(careersArr[i])
+          }
+        }, 5000)
+        
+      }, []);
 
-    if (careerIndex === 0) {
-          setTimeout(() => {
-            setCareerIndex((careers.length - 1));
-          }, 5000);
-    } 
 
-    if(careers.length > 0) {
-        let tmp = []
-        careers.forEach(career => {
-            if(tmp.length > 0) {
-                setTimeout(() => {
-                    console.log(career);
-                    tmp.push(career)
-                    setDisplayedCareers(tmp)
-                }, 3000);
-            }
-            else {
-                tmp.push(career)
-                setDisplayedCareers(tmp)
-            }
-        });
-    }
-
-  }, [careerIndex]);
 
   return (
     <>
+    <Header></Header>
     <Container>
       <Row>
         <Col>
-          <section className="landing first-fold">
+          <section className="landing first fold">
+            {/* <Menu></Menu> */}
             <div className="intro">
             <div className="animated-svg">
               <svg
@@ -89,7 +90,7 @@ const LandingPage = () => {
                 <p className="location titilium-web-font">
                   📍 &nbsp; Based in Dar es Salaam, Tanzania
                 </p>
-                <div style={{
+                <div className="divider" style={{
                   height: 'max(1vh, 1em)',
                   width: '1px',
                   backgroundColor: '#777'
@@ -97,17 +98,31 @@ const LandingPage = () => {
                 }>
 
                 </div>
-                  <p className="careers titilium-web-font">{ careers[0] }</p>
+                {
+                  displayedCareers &&
+                  displayedCareers === careers[1] &&
+                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                }
+                 {
+                  displayedCareers &&
+                  displayedCareers === careers[0] &&
+                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                }
+                {
+                  displayedCareers &&
+                  displayedCareers === careers[2] &&
+                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                }
               </div>
             </div>
           
             </div>
           </section>
           
-          <section>
+          <section className="second fold">
             <Row>
               <Col lg={8}>
-                <h3 className="section title titilium-web-font">
+                <h3 className="section text-uppercase title titilium-web-font">
                 about me
               </h3>
 
@@ -123,19 +138,159 @@ const LandingPage = () => {
               Currently IT Lead at Ideate space, Looking for remote design opportunities as well as open to new challenges
               </p>
 
-              <a href="#">
-                more about me
+              <a className="tilium-web-font" href="#">
+                more about me <span className="mx-3">
+                  <RightArrow width={'10px'}/>
+                  </span> 
               </a>
 
               </Col>
+
+              {/* blob or 3d image here */}
               <Col>
               </Col>
             </Row>
           </section>
+
         </Col>
         
       </Row>
     </Container>
+    <section className="third fold highlight projects">
+      <Container>
+        <Row>
+          <Col>
+          <Container>
+            <Row>
+              <Col>
+                <div className="project px-lg-5">
+                  <img src={TentenPoster} className="w-100" />
+                  <h3 className="font-weight-bold mt-4">
+                    Redefining travel and lifestyle with TenTen Explore
+                  </h3>
+                  <p className="caption text-uppercase">
+                    Product design &nbsp; &#8226; &nbsp; case study &nbsp; &#8226; &nbsp; User experience Design
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+          </Col>
+        </Row>
+      </Container>
+
+    </section>
+
+    <section className="fourth fold projects">
+      <Container>
+        <Row>
+          <Col>
+                <h3 className="text-weight-semi-bold mt-5">
+                  Other Projects
+                </h3>
+
+                <div className="other projects">
+
+                  <div className="project">
+                    <h4 className="title">
+                      Bus shuttle app
+                    </h4>
+                    <p className="description">
+                      Product design for urban area bus shuttle mobile application
+                    </p>
+                    <a href="#" className="disabled">
+                      Case study coming soon
+                    </a>
+                  </div>
+
+                  <div className="project">
+                    <h4 className="title">
+                      Quantial solution
+                    </h4>
+                    <p className="description">
+                      Interface design and front-end development for Quantial company page with react Gatsby
+                    </p>
+                    <a href="#">
+                      view website 
+                      <span className="up-right mx-3">
+                      <UpRightArrow width={'8px'} height={'8px'}/>
+                      </span>
+                    </a>
+                  </div>
+
+                  <div className="project">
+                    <h4 className="title">
+                      Kwanza homes
+                    </h4>
+                    <p className="description">
+                      Front-end development for kwanza homes survey webapp
+                    </p>
+                    <a href="#">
+                      view website
+                      <span className="up-right mx-3">
+                      <UpRightArrow width={'8px'} height={'8px'}/>
+                      </span>
+                    </a>
+                  </div>
+
+                  <div className="project">
+                    <h4 className="title">
+                      SNDBX by id8 Space
+                    </h4>
+                    <p className="description">
+                      Landing page interface design and 
+                      Front-end dev for SNDBX by ideate 
+                      new landing page
+                    </p>
+                    <a href="#">
+                      view website
+                      <span className="up-right mx-3">
+                      <UpRightArrow width={'8px'} height={'8px'}/>
+                      </span>
+                    </a>
+                  </div>
+
+                  <div className="project">
+                    <h4 className="title">
+                      Id8 space - ideate space
+                    </h4>
+                    <p className="description">
+                      User experience design and front-end dev for hackathon feature
+                    </p>
+                    <a href="#">
+                      view website
+                      <span className="up-right mx-3">
+                      <UpRightArrow width={'8px'} height={'8px'}/>
+                      </span>
+                    </a>
+                  </div>
+
+
+                </div>
+          </Col>
+        </Row>
+      </Container>
+
+    </section>
+
+    <section className="fifth fold contact">
+      <Container>
+        <Row>
+          <Col>
+                <h2 className="my-3">
+                  Have a gig for me? Get in touch!
+                </h2>
+                <a href="#" className="caption text-uppercase">
+                  📪  &nbsp; Write me an email
+                </a>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+    <section className="footer">
+      <Footer></Footer>
+    </section>
     </>
   );
 };

@@ -1,0 +1,13 @@
+
+
+.bottom-menu {
+    position: absolute;
+    bottom: 2rem;
+    margin-inline: auto;
+    
+    .bottom-menu-items {
+        padding: 3rem;
+        background-color: #fff;
+        width: fit-content;
+    }
+}

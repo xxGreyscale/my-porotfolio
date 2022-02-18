@@ -1,11 +1,23 @@
 
 @import './layout.scss';
 @import './attribute.scss';
+@import './fonts/fonts.scss';
 
+
+// change base of the VW in font and width
 
 
 h1.name {
-    font-size: calc(max(2vw, 5em, 5rem));
+    font-size: calc(max(2vw, 5.5em, 5.5em));
+
+    @media only screen and (max-width: 768px) {
+        font-size: calc(max(2vw, 4em, 4em));
+    }
+
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(5.5rem + 0.3vw);
+    }
+
     font-weight: 600;
     color: #010101;
     margin: 0 auto;
@@ -15,13 +27,34 @@ h1.name {
 
 p.about-me {
     font-size: calc(max(2vw, 3em, 3rem));
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(2.5rem + 0.3vw);
+    }
+
     font-weight: 500;
 
 }
 
 p.caption {
-    font-size: calc(max(2vw, 1.75em , 1.75rem)) !important;
-    font-weight: 200;
+    font-size: calc(max(2vw, 1.75em , 1.75rem));
+
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(1.5rem + 0.3vw);
+    }
+
+
+    font-weight: 300;
+}
+
+a {
+    font-family: Bebas Neue Pro SmE Book;
+    color: #685271 !important;
+    font-size: calc(max(1.325vw, 1em, 1rem));
+
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+    text-transform: capitalize;
 }
 
 #animated_blob {
@@ -34,11 +67,30 @@ p.caption {
     // z-index: -1;
 }
 
-.first-fold {
-    min-height: 100vh;
+.fold {
     display: flex;
+    padding: 5rem 0rem;
 }
 
+.first.fold {
+    position: relative;
+    padding-top: 12rem;
+    min-height: 100vh;
+    @media only screen and (min-width: 768px) {
+        min-height: 80vh;
+    }
+    @media only screen and (min-width: 1200px) {
+        min-height: 80vh;
+    }
+    margin: 0;
+}
+
+.third.fold {
+}
+
+.fourth.fold {
+    background-color: #F7F4F8;
+}
 
 
 .greeting {
@@ -61,15 +113,37 @@ p.caption {
 
 
 
-.description {
+.description:not(p.description) {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: flex-start;
     grid-gap: 3rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: calc(max(1.85vw, 1.25em, 1.25rem));
+        grid-template-columns: auto;
+        grid-gap: 0rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        font-size: calc(max(1.85vw, 1.475em, 1.475rem));
+        grid-template-columns: auto;
+        grid-gap: 0rem 3rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+        font-size: calc(max(1.85vw, 1.475em, 1.475rem));
+        grid-template-columns: auto auto auto;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(1.5rem + 0.3vw);
+    }
+
+
     width: 100%;
     align-items: center;
     height: auto;
-    font-size: calc(max(1.85vw, 1.475em, 1.475rem));
     font-weight: 300;
 
     p {
@@ -80,9 +154,25 @@ p.caption {
         transition: all 1s ease-in;
     }
 
+    .divider {
+        @media only screen and (max-width: 768px) {
+           display: none;
+        }
+    
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
 
-    .careers {
-        animation: disolve 1s forwards;
+        @media only screen and (min-width: 992px) {
+            display: block;
+        }
+    }
+
+
+    .careers.animate {
+        transition: all 2s ease-in;
+        opacity: 0;
+        animation: disolve 2s forwards;
     }
 
 }
@@ -90,7 +180,15 @@ p.caption {
 
 .animated-svg {
     transform: rotate(180deg);
-    transform: translate(0%, -30%);
+    
+    @media only screen and (max-width: 768px) {
+        transform: translate(-10%, -30%);
+    }
+    
+    @media only screen and (min-width: 768px) {
+        transform: translate(0%, -30%);
+    }
+
     height: calc(max(20vw, 40rem, 200px));
     width: calc(max(20vw, 25rem, 100px));
     display: block;
@@ -105,11 +203,116 @@ p.caption {
     // min-width: 45vw;
 }
 
+.highlight.projects {
+    .project {
+        width: fit-content;
+        margin-inline: auto;
+        margin-bottom: 5rem;
+
+        img {
+            border-radius: .275rem;
+
+        }
+        h3 {
+            font-weight: 600 !important;
+        }
+        p.caption {
+            font-family: Bebas Neue Pro SmE Middle;
+            color: #685271;
+            font-size: calc(max(1.325vw, 1em, 1rem));
+
+            @media only screen and (min-width: 1200px) {
+                font-size: calc(1rem + 0.3);
+            }
+        }
+    }
+}
+
+.other.projects {
+    display: grid;
+    width: 100%;
+    margin: 6rem 0rem;
+    grid-gap: 4rem 2rem;
+    grid-template-columns: auto auto auto;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: auto;
+    }
+
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: auto auto;
+    }
+
+    @media only screen and (min-width: 992px) {
+        grid-template-columns: auto auto auto;
+    }
+    justify-content: center;
+    align-items: flex-start;
+
+    .title {
+        font-weight: 600;
+    }
+
+    .description {
+        font-size: calc(max(1.275vw, 1em, 1rem));
+
+        @media only screen and (min-width: 1200px) {
+            font-size: calc(1rem + 0.3vw);
+        }
+
+        font-weight: 300;
+        margin: 1.5rem 0rem;
+    }
+
+    a {
+        color: #685271 !important;
+        font-family: Bebas Neue Pro SmE Book;
+        font-size: calc(max(1.275vw, 1em, 1rem));
+
+        @media only screen and (min-width: 1200px) {
+            font-size: calc(1rem + 0.3vw);
+        }
+        font-weight: 300;
+        text-transform: capitalize;
+        opacity: 1;
+        span.up-right {
+            svg {
+                transition: all 150ms ease-in;
+                transform: rotate(0deg);
+            }
+        }
+
+        &:hover {
+            opacity: .7;
+            span.up-right {
+                svg {
+                    transition: all 150ms ease-in;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+}
+
+.contact {
+    a {
+        font-family: Bebas Neue Pro SmE Book;
+        text-transform: none !important;
+        font-size: calc(max(2vw, 1.75em , 1.75rem));
+        text-decoration: none;
+        color: #685271 !important;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
 
 
 @keyframes disolve {
     from {
         opacity: 0;
+        transform: translate(0%, 50%);
     }
     to {
         opacity: 1;

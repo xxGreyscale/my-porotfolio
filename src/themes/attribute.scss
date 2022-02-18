@@ -3,11 +3,15 @@ h1 {
 }
 
 h2 {
-
+    font-size: calc(max(2vw, 3.5em , 3.5em));
+    font-weight: 600 !important;
 }
 
 h3 {
-    font-size: calc(max(2vw, 1.75em , 1.75rem)) !important;
+    font-size: calc(max(2vw, 1.75em , 1.75rem));
     font-weight: 300 !important;
-    text-transform: uppercase;
+
+    @media only screen and (min-width: 1200px) {
+        font-size: calc(1.275rem + 0.3vw);
+    }
 }
