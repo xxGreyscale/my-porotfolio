@@ -8,7 +8,7 @@ import {ReactComponent as RightArrow} from '../../assets/svg/Icon feather-arrow-
 import {ReactComponent as UpRightArrow} from '../../assets/svg/Icon feather-arrow-up-right.svg'
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import Menu from "../../components/menu";
+// import Menu from "../../components/menu";
 
 
 
@@ -138,7 +138,7 @@ const LandingPage = () => {
               Currently IT Lead at Ideate space, Looking for remote design opportunities as well as open to new challenges
               </p>
 
-              <a className="tilium-web-font" href="#">
+              <a className="tilium-web-font" href="/">
                 more about me <span className="mx-3">
                   <RightArrow width={'10px'}/>
                   </span> 
@@ -164,7 +164,7 @@ const LandingPage = () => {
             <Row>
               <Col>
                 <div className="project px-lg-5">
-                  <img src={TentenPoster} className="w-100" />
+                  <img src={TentenPoster} alt="tenten explore project" className="w-100" />
                   <h3 className="font-weight-bold mt-4">
                     Redefining travel and lifestyle with TenTen Explore
                   </h3>
@@ -198,7 +198,7 @@ const LandingPage = () => {
                     <p className="description">
                       Product design for urban area bus shuttle mobile application
                     </p>
-                    <a href="#" className="disabled">
+                    <a href="." className="disabled">
                       Case study coming soon
                     </a>
                   </div>
@@ -210,7 +210,7 @@ const LandingPage = () => {
                     <p className="description">
                       Interface design and front-end development for Quantial company page with react Gatsby
                     </p>
-                    <a href="#">
+                    <a href="https://quantial.solutions/">
                       view website 
                       <span className="up-right mx-3">
                       <UpRightArrow width={'8px'} height={'8px'}/>
@@ -225,7 +225,7 @@ const LandingPage = () => {
                     <p className="description">
                       Front-end development for kwanza homes survey webapp
                     </p>
-                    <a href="#">
+                    <a href=".">
                       view website
                       <span className="up-right mx-3">
                       <UpRightArrow width={'8px'} height={'8px'}/>
@@ -242,7 +242,7 @@ const LandingPage = () => {
                       Front-end dev for SNDBX by ideate 
                       new landing page
                     </p>
-                    <a href="#">
+                    <a href="https://sndbx.id8.space">
                       view website
                       <span className="up-right mx-3">
                       <UpRightArrow width={'8px'} height={'8px'}/>
@@ -257,7 +257,7 @@ const LandingPage = () => {
                     <p className="description">
                       User experience design and front-end dev for hackathon feature
                     </p>
-                    <a href="#">
+                    <a href="https://id8.space">
                       view website
                       <span className="up-right mx-3">
                       <UpRightArrow width={'8px'} height={'8px'}/>
@@ -280,7 +280,7 @@ const LandingPage = () => {
                 <h2 className="my-3">
                   Have a gig for me? Get in touch!
                 </h2>
-                <a href="#" className="caption text-uppercase">
+                <a href="/" className="caption text-uppercase">
                   📪  &nbsp; Write me an email
                 </a>
           </Col>
