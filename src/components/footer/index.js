@@ -26,7 +26,7 @@ const Footer = () => {
                                 </li>
                             </ul>
 
-                            <p className='trademark'>
+                            <p className='text-left text-xs-left trademark'>
                               &#169; 2022 madebysalinastic
                             </p>
                         </div>

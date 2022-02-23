@@ -28,7 +28,13 @@
 
 p.trademark {
     margin: auto 0rem;
-    margin-left: auto;
+    margin-right: auto;
+    
+
+    @media only screen and (min-width: 768px) {
+        margin-left: auto; 
+        margin-right: 0rem;   
+    }
 }
 
 
