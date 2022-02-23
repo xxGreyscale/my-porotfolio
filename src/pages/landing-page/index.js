@@ -13,12 +13,12 @@ import Header from "../../components/header";
 
 
 const LandingPage = () => {
-  const careers = [`👨🏽‍💻 Full Stack Developer`, `🖥  UX/UI Designer`, `☁️ AWS Cloud Practitioner`];
+  const careers = [`👨🏽‍💻 &nbsp; Full Stack Developer`, `🖥 &nbsp; UX/UI Designer`, `☁️ &nbsp; AWS Cloud Practitioner`];
   const [displayedCareers, setDisplayedCareers] = useState(careers[1])
     
     
     useEffect(() => {
-      const careersArr = [`👨🏽‍💻 Full Stack Developer`, `🖥  UX/UI Designer`, `☁️ AWS Cloud Practitioner`]
+      const careersArr = [`👨🏽‍💻 &nbsp; Full Stack Developer`, `🖥 &nbsp; UX/UI Designer`, `☁️ &nbsp; AWS Cloud Practitioner`]
       const tween = KUTE.fromTo(
           "#blob_1",
           { path: "#blob_1" },
@@ -32,20 +32,21 @@ const LandingPage = () => {
         tween.start();
         let i = 0
         setInterval(() => {
-          console.log(i);
           if(i >= (careersArr.length - 1)) {
             i = 0
-            console.log(careersArr[i]);
             setDisplayedCareers(careersArr[i])
             return
           } else {
             i = i + 1
-            console.log(careersArr[i]);
             setDisplayedCareers(careersArr[i])
           }
         }, 5000)
         
       }, []);
+
+      function createMarkup() {
+        return {__html: displayedCareers};
+      }
 
 
 
@@ -101,17 +102,17 @@ const LandingPage = () => {
                 {
                   displayedCareers &&
                   displayedCareers === careers[1] &&
-                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                  <p className="careers animate titilium-web-font" dangerouslySetInnerHTML={createMarkup()}></p>
                 }
                  {
                   displayedCareers &&
                   displayedCareers === careers[0] &&
-                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                  <p className="careers animate titilium-web-font" dangerouslySetInnerHTML={createMarkup()}></p>
                 }
                 {
                   displayedCareers &&
                   displayedCareers === careers[2] &&
-                  <p className="careers animate titilium-web-font">{ displayedCareers }</p>
+                  <p className="careers animate titilium-web-font" dangerouslySetInnerHTML={createMarkup()}></p>
                 }
               </div>
             </div>
