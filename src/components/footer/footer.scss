@@ -16,14 +16,31 @@
     padding: 0rem;
 
     .list-item {
-        &:not(:nth-child(1)) {
-            margin-left: 0rem;
-        }
-        margin-top: 1rem;
-        margin-bottom: .125rem;
-        margin-right: 1.5rem;
-    }
+        display: flex;
+        align-items: center;
+        a {
+            font-family: 'Titillium Web', sans-serif;
+            color: #010101 !important;
+            text-decoration: none;
+            font-size: 1.25rem;
+            &:not(:nth-child(1)) {
+                margin-left: 0rem;
+            }
+            margin-bottom: .125rem;
+            margin-right: 1.5rem;
 
+            &:hover{
+                opacity: .7;
+            }
+            .ico {
+                margin: 0rem .5rem;
+                    &:nth-child(1) {
+                    margin-left: 0rem;
+                    }
+            }
+        }
+            
+    }
 }
 
 p.trademark {

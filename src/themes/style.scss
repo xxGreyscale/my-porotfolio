@@ -46,7 +46,7 @@ p.caption {
     font-weight: 300;
 }
 
-a {
+a:not(.footer-list) {
     font-family: Bebas Neue Pro SmE Book;
     color: #685271 !important;
     font-size: calc(max(1.325vw, 1em, 1rem));
